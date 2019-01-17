@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<title>File details</title>
+</head>
+<body>
+	<div>
+		<div style="float: left; display: inline; margin-right: 50px;">
+			<h1>
+				Details for file: <span th:text="${fileName}"></span>
+			</h1>
+		</div>
+		<div style="float: left; display: inline; margin-top: 20px;">
+			<a class="btn btn-primary" th:href = "@{/showResults}">Back to list</a>
+		</div>
+		
+		<div style="clear:both; margin-right: 20px;">
+			<pre lang="xml" th:text = ${content}></pre>
+		</div>
+		
+	</div>
+</body>
+</html>
